@@ -1,0 +1,262 @@
+@width: 1200px;
+
+.air-product-container {
+    .card-item {
+        width: 100%;
+        margin: 23px 0px;
+        box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .4);
+        position: relative;
+        display: flex;
+        min-height: 300px;
+        &.first-item {
+            .number {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .card-left {
+                display: flex;
+                align-items: center;
+                .picture {
+                    margin-top: 0;
+                    
+                }
+            }
+            .card-center {
+                .list-box {
+                    dd {
+                        .text {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .best-box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 360px;
+            height: 55px;
+            background-color: #F96E36;
+            color: #ffffff;
+            line-height: 55px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            &::after {
+                position: absolute;
+                right: 0;
+                bottom: -14px;
+                content: '';
+                width: 0;
+                height: 0px;
+                border-bottom: 7px solid transparent;
+                border-top: 7px solid #F96E36;
+                border-left: 180px solid transparent;
+                border-right: 180px solid transparent;
+
+            }
+            &.secondBg {
+                background-color: #FA8A5E;
+                &::after {
+                   border-top-color: #FA8A5E;
+                }
+            }
+            &.thirdBg {
+                background-color: #FBA786;
+                &::after {
+                    border-top-color: #FBA786;
+                }
+            }
+        }
+        
+        .number {
+            position: absolute;
+            left: 0;
+            bottom: 90px;
+            width: 61px;
+            height: 72px;
+            background-color: #384DCe;
+            font-size: 60px;
+            text-align: center;
+            line-height: 72px;
+            color: #ffffff;
+            &.gray {
+                background-color: #A8A7A7;
+            }
+        }
+        .card-left {
+            float: left;
+            width: 420px;
+            .picture {
+                width: 280px;
+                height: 190px;
+                margin-left: 60px;
+                margin-top: 92px;
+                display: block;
+            }
+        }
+        .card-center {
+            float: left;
+            width: 500px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .product-logo {
+                display: block;
+                width: 200px;
+                height: 40px;
+                margin-bottom: 21px;
+            }
+            .product-name {
+                font-size: 20px;
+                color: #101010;
+                margin-top: 19px;
+                margin-bottom: 30px;
+            }
+            .list-box {
+                dt {
+                    font-size: 20px;
+                    color: #101010;
+                    
+                }
+                dd {
+                    margin: 9px 0px;
+                    .icon {
+                        display: inline-block;
+                        width: 14px;
+                        height: 14px;
+                        background-image: url('../image/air/list-icon.png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        vertical-align: middle;
+                        margin-right: 11px;
+                    }
+                    .text {
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 15px;
+                        
+                        color: #353535;
+                    }
+                }
+            }
+        }
+        .card-right {
+            float: left;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 260px;
+            background-color: #F7F7F7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .circle-box {
+                width: 125px;
+                height: 125px;
+                // background-color: #8cb3fb;
+                position: relative;
+                margin-bottom: 26px;
+                .circle1,.circle2 {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 125px;
+                    height: 125px;
+                    border-left: 5px solid #8cb3fb;
+                    border-bottom: 5px solid #8cb3fb;
+                    border-right: 5px solid transparent;
+                    border-top: 5px solid transparent;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    transform: rotateZ(45deg);
+                }
+                
+                .circle2 {
+                    transition: all ease-in-out 1s;
+                }
+                .score {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    font-size: 46px;
+                    color: #101010;
+                }
+            }
+            .btn {
+                display: block;
+                text-decoration: none;
+                color: #ffffff;
+                width: 200px;
+                height: 44px;
+                line-height: 44px;
+                font-size: 28px;
+                border-radius: 5px;
+                background-color: #384DCE;
+                text-align: center;
+                box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, .4);
+                transition: all linear 0.15s;
+                font-weight: bold;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    background-color: #4687FF;
+                    box-shadow: none;
+                }
+                span {
+                    
+                    &.icon {
+                        display: inline-block;
+                        margin-top: 5px;
+                        margin-left: 3px;
+                        width: 25px;
+                        height: 25px;
+                        background-image: url('../image/air/right-icon.png');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: -14px center;
+                    }
+                }
+                
+            }
+            .review {
+                color: #384DCE;
+                margin-top: 14px;
+                text-decoration: none;
+                border-bottom: 1px solid #384dce;
+                font-size: 14px;
+                &:hover {
+                    color: #4687FF;
+                }
+            }
+        }
+
+        &.no-best {
+            padding: 0;
+            .number {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .card-left {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .picture {
+                    margin: 0;
+                }
+            }
+            .card-center {
+                // padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
